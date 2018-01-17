@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Shop';
+  onBuyClick(){
+    console.log(`You have bought something`);
+  }
 }
