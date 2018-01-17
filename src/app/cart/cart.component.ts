@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.products = this.cartService.getreservedProducts();
+    this.products = this.cartService.getReservedProducts();
   }
 
 }

@@ -9,13 +9,15 @@ import { CartComponent } from './cart/cart.component';
 
 import { ProductsService } from './products.service';
 import { CartService } from './cart.service';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ProductListComponent,
-    CartComponent
+    CartComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule

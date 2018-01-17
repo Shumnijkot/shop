@@ -16,7 +16,7 @@ export class CartService {
     this.reservedProducts = reservedProducts;
     return true;
   }
-  getreservedProducts(){
+  getReservedProducts(){
     return this.reservedProducts;
   }
 

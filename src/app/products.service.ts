@@ -7,15 +7,28 @@ export class ProductsService {
   productList: any[];
 
   constructor() {
-    this.initProductList();
+    this.initProductListIfNone();
+    this.addCoupleOfProducts();
   }
 
-  initProductList(){
-    let productList = new Array();
-    productList.push(new Product('apart', 12));
-    productList.push(new Product('monster', 13));
-    productList.push(new Product('plane', 3));
-    this.productList = productList;
+  initProductListIfNone(){
+    if(!this.productList) {
+      this.productList = new Array();
+    }
+  }
+
+  addCoupleOfProducts(){
+    this.productList.push(new Product('apart', 12));
+    this.productList.push(new Product('monster', 13));
+    this.productList.push(new Product('plane', 3));
+  }
+
+  addProduct(name, ammount){
+    this.initProductListIfNone();
+    if(!name) {
+      return false;
+    }
+    this.productList.push(new Product(name, ammount))
   }
 
   getProducts(){
